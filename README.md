@@ -1,5 +1,6 @@
 # PET Calculations
 
+Making use of the pyet package to estimate potential evapotranspiration (Estimation of Potential Evapotranspiration)[https://github.com/pyet-org/pyet]
 
 
 ## Getting started
