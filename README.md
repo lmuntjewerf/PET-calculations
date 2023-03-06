@@ -1,7 +1,8 @@
 # PET Calculations
 
-To calculate PET we use of the pyet package to estimate potential evapotranspiration (Estimation of Potential Evapotranspiration)[https://github.com/pyet-org/pyet]
-We use the method ASCE Penman-Monteith
+This repo is a set of scripts to calculate daily potential evapotranspiration and net radiation at the surface for the 3200 year large ensemble KNMI-LENTIS dataset. 
+To calculate PET we use of the pyet package to estimate potential evapotranspiration (Estimation of Potential Evapotranspiration)[https://github.com/pyet-org/pyet]. 
+We use the method ASCE Penman-Monteith. 
 
 This requires the following cmorised DAILY data:
 - rsds,rsus,rlds,rlus,tas,tasmin,tasmax,sfcWind and hurs (DAILY)
