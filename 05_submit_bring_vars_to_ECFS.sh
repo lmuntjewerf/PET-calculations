@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
+
 # Laura Muntjewerf
 #
 # Run this script without arguments for examples how to call this script.
 # 
-# submit script to bring tar.gz files of cmorized output to ECFS
+# submit script to bring tar.gz files of Rnet and PET to ECFS
 # following the ec-folder structer as created by:
-#     /home/ms/nl/nklm/VAREX-LE_script_train/HPSS/ltape/make_ec_folders.sh
+#     PET_calculations/04_make_ecfs_folders.sh
 #
-# This scripts requires two arguments:
-#  1st argument: frequency of the cmor output
-#  2nd argument: experiment name
+# This scripts requires one arguments: 
+#  1st argument: experiment name
+#
 
 if [ "$#" -eq 1 ]; then
 

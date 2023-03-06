@@ -13,7 +13,11 @@ import numpy as np
 #              CALC Rnet and PET for cmorised model data
 # --------------------------------------------------------------------------
 # Script to calculate net surface radiation and potential evapotranspiration 
-# writing these to netcdf while maintaining the file attributes. Output in diri. 
+# uses the packages Pyet for estimating potential evaporation
+# [https://github.com/pyet-org/pyet]
+# with the method ASCE Penman-Monteith
+#
+#  Scripts writes rnet and PET to netcdf while maintaining the file attributes. Output in diri. 
 #
 # Requires the following cmorised data:
 # rsds,rsus,rlds,rlus,tas,tasmin,tasmax,sfcWind,hurs,orog
@@ -23,7 +27,7 @@ import numpy as np
 #
 # Call as follow to calculate Rnet and PET:
 #
-#      ./perturb_var.py --diri 'input dir' --freq 'cmor freq; day or mon' --year 'year'
+#      ./calc_Rnet_PET.py --diri 'input dir' --freq 'cmor freq; day or mon' --year 'year'
 #
 """
 

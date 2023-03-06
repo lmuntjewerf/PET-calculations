@@ -1,9 +1,13 @@
 #!/bin/bash
-#
+
 # **************************** LM notes ****************************************
 #
-# Script for submitting the Rnet_PET calculation
+# Script for submitting the Rnet_PET calculation as a job
 # Provide arguments in command line
+#
+# This scripts call calc_Rnet_PET.py via run_Rnet_PET_calc_args.sh
+#
+# Arguments: scenario letter (h or s), the three ensemble member numbers, the frequence (day or month)
 #
 #  How to run: 
 #  sbatch ./03_submit_slurm.sh h 010 day

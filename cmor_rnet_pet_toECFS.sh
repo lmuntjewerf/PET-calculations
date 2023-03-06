@@ -3,11 +3,10 @@
 set -ex
 
 # ==================
-# this script makes tar.gz files from all cmorized variable folders
-# *tar.gz files are stored in the FREQUENCY folders (3hr, Amon etc)
+# this script makes tar.gz files from Rnet and PET
+# *tar.gz files are stored in the FREQUENCY folders (day)
 # Arguments: 
-#    $1 is FREQUENCY (3hr, Amon etc)
-#    $2 is EXP (h011 etc)
+#    $1 is EXP (h011 etc)
 # ==================
 
 
@@ -54,10 +53,10 @@ cd ${FREQUENCY}
 for var in rnet pet; do
   echo ${var};
   tar -czvf ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${cmorpath}/${FREQUENCY}/${var}                   # tar the file
-  #ecfsdir_var=${ecfsdir}${scenariofolder}${FREQUENCY}/${var}                                                 # define the ECFS folder
-  #emv -o ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${ecfsdir_var}/             # -o: overwrite if already existing ;move (previous ecp/copy) tar file to ECFS -e if not already existing, otherwise keep old #rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz                             # remove the tar file
-  #rm ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz
+  ecfsdir_var=${ecfsdir}${scenariofolder}${FREQUENCY}/${var}                                                 # define the ECFS folder
+  emv -o ${tempfolder}${EXP}_${FREQUENCY}_${var}.tar.gz ${ecfsdir_var}/             # -o: overwrite if already existing ;move (previous ecp/copy) tar file to ECFS -e if not already existing, otherwise keep old #rm -rf ${EXP}_${FREQUENCY}_${var}.tar.gz     
+  
 done  ;
 
 
-#echo "Tar files are here:  ${ccadir}/${FREQUENCY}"
+

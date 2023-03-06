@@ -3,7 +3,7 @@
 #set -ex
 
 #-------------------
-# calculate Rnet and PET for daily LENTIS output
+# calculate Rnet and PET for LENTIS output
 # this script takes arguments:
 #
 # scenario=$1
